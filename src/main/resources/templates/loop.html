@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>For Loop</h1>
+
+	<ul>
+		<li th:each="n, status : ${listData}">
+			<p th:text="${status.index+1} + ' ' + ${n}"></p>
+		</li>
+	</ul>
+	<p>------------------------</p>
+	<ul>
+		<li th:each="n, status : ${listData}">
+			<p th:style="${status.odd} ? 'color:red' : ''"
+				th:text="${status.index+1} + ' ' + ${n}"></p>
+		</li>
+	</ul>
+
+</body>
+</html>

@@ -1,10 +1,10 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import ch.qos.logback.core.model.Model;
+import org.springframework.ui.Model;
 
 @Controller
 public class TestController {
@@ -15,9 +15,16 @@ public class TestController {
 	}
 
 	@GetMapping("/about")
-	public String about(org.springframework.ui.Model model) {
+	public String about(Model model) {
 		model.addAttribute("name", "abcd");
 		model.addAttribute("age", 50);
 		return "about";
+	}
+	
+	@GetMapping("/loop")
+	public String loop(Model model) {
+		List<String> list = List.of("a", "b", "c", "d");
+		model.addAttribute("listData", list);
+		return "loop";
 	}
 }
