@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 th:text="${isActive}"
+th:style="${isActive} ? 'color:green' : 'color:red'"></h1>
+
+<p th:if="${isActive} == true ">Active</p>
+
+<p th:unless="${isActive} == true ">Inactive</p>
+
+</body>
+</html>

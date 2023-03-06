@@ -27,4 +27,11 @@ public class TestController {
 		model.addAttribute("listData", list);
 		return "loop";
 	}
+	
+	@GetMapping("/conditionalStatements")
+	public String conditionalStatements(Model model) {
+		boolean isActive = true;
+		model.addAttribute("isActive", isActive);
+		return "conditionalStatements";
+	}
 }
