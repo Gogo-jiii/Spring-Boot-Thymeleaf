@@ -34,4 +34,9 @@ public class TestController {
 		model.addAttribute("isActive", isActive);
 		return "conditionalStatements";
 	}
+	
+	@GetMapping("/footer")
+	public String footer() {
+		return "footer";
+	}
 }
