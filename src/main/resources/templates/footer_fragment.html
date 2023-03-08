@@ -6,7 +6,8 @@
 </head>
 <body>
 
-<footer id= "fragment-id" th:fragment="fragment_name">
+<footer id= "fragment-id" th:fragment="fragment_name(title)">
+	<h1 th:text=${title}></h1>
 	<h1>This is a footer</h1>
 </footer>
 

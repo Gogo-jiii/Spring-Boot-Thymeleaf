@@ -36,7 +36,8 @@ public class TestController {
 	}
 	
 	@GetMapping("/footer")
-	public String footer() {
+	public String footer(Model model) {
+		model.addAttribute("title","THIS IS A TITLE");
 		return "footer";
 	}
 }
