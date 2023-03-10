@@ -40,4 +40,9 @@ public class TestController {
 		model.addAttribute("title","THIS IS A TITLE");
 		return "footer";
 	}
+	
+	@GetMapping("/inheritance")
+	public String inheritance() {
+		return "inheritancefile";
+	}
 }
